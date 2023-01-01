@@ -1,5 +1,7 @@
 # Building Transaction Apache Hudi Data Lake with Streaming ETL from Multiple Kinesis Streams and Joining using Apache Flink Part 1
 
+### Video Tutorials 
+* https://www.youtube.com/watch?v=hm2LKBCGTcU&feature=youtu.be
 
 #### Project Overview:
 * We are attempting to execute ETL on streaming data in this project. You've used the Database per Service design pattern. Each service has an own database. However, some business transactions transcend numerous services, necessitating the need of a method to conduct such transactions. Assume you have two service orders and Customers. These services keep their own local databases, but businesses want to access stitched data for some insights, thus we'll use the SAGA Pattern, in which each microservice broadcasts events on its own streams. We will cleanse the data, join it with Apache Flink, and insert  the curated data into the next stream where the glue streaming task may take the curated data and execute UPSERT on Apache Hudi data lakes. This way we are performing streaming ETL and data is available for use within < 5 minutes
